@@ -195,11 +195,11 @@ singlelinecheck=false}
 \newcommand{\source}[1]{\footnotesize\textit{Source:~#1}}
 \newcommand{\notes}[1]{\footnotesize\textit{Notes:~#1}}
 
-\setkomafont{disposition}{\bfseries\color{Orange}}
-\addtokomafont{chapter}{\Large}
-\addtokomafont{section}{\normalsize}
-\addtokomafont{subsection}{\normalsize}
-\addtokomafont{subsubsection}{\sffamily\normalsize}
+\setkomafont{disposition}{\color{Orange}}
+\addtokomafont{chapter}{\bfseries\Large}
+\addtokomafont{section}{\bfseries\normalsize}
+\addtokomafont{subsection}{\bfseries\normalsize}
+\addtokomafont{subsubsection}{\normalsize}
 
 % Spacing
 \RedeclareSectionCommand[
@@ -274,6 +274,9 @@ left=2.75cm,right=2.75cm
 %  Headers and footers
 %% ---------------------------------
 \RequirePackage[headsepline,plainheadsepline,footsepline,plainfootsepline]{scrlayer-scrpage}
+
+\addtolength{\textheight}{40pt}
+\addtolength{\footskip}{-10pt}
 
 \clearscrheadings
 \clearscrplain
@@ -399,7 +402,7 @@ keepaspectratio]{./FrontPage/FrontPagePicture.pdf}%
 % Bibliography
 \RequirePackage[british]{babel}
 \RequirePackage{csquotes}
-\RequirePackage[backend=biber,style=authoryear-ibid,ibidtracker=true, autocite=footnote]{biblatex}
+\RequirePackage[backend=biber,style=authoryear-ibid,ibidtracker=strict, autocite=footnote]{biblatex}
 \renewcommand*{\bibfont}{\raggedright}
 \DeclareLanguageMapping{british}{british-apa}
 
